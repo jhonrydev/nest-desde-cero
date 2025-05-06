@@ -1,8 +1,9 @@
+
 export interface User {
-    id:     number;
-    nombre: string;
-    email:  string;
-    edad:   number;
-    activo: boolean;
-    rol:    string;
+  id: string;
+  nombre: string;
+  email: string;
+  edad: number;
+  activo: boolean;
+  rol: string;
 }
