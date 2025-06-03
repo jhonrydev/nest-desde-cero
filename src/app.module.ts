@@ -4,7 +4,18 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UsersModule } from './users/users.module';
+import { StatusModule } from '@modules/status/status.module';
+import { UsersModule } from '@modules/users/users.module';
+import { CategoryModule } from '@modules/category/category.module';
+import { PositionModule } from '@modules/position/position.module';
+import { RoleModule } from '@modules/role/role.module';
+import { DepartmentModule } from '@modules/department/department.module';
+import { BrandModule } from '@modules/brand/brand.module';
+import { FixedAssetModule } from '@modules/fixed-asset/fixed-asset.module';
+import { TypeMaintenanceModule } from '@modules/type-maintenance/type-maintenance.module';
+import { MaintenanceModule } from '@modules/maintenance/maintenance.module';
+import { PermissionRolesModule } from './modules/permission-roles/permission-roles.module';
+import { PermissionModule } from './modules/permission/permission.module';
 
 @Module({
   imports: [
@@ -20,6 +31,17 @@ import { UsersModule } from './users/users.module';
       synchronize: true, // Solo para desarrollo, no usar en producción
     }),
     UsersModule,
+    StatusModule,
+    CategoryModule,
+    PositionModule,
+    RoleModule,
+    DepartmentModule,
+    BrandModule,
+    FixedAssetModule,
+    TypeMaintenanceModule,
+    MaintenanceModule,
+    PermissionRolesModule,
+    PermissionModule,
   ],
   controllers: [AppController],
   providers: [AppService],

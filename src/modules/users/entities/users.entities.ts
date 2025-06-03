@@ -14,7 +14,7 @@ export class User {
   @Column({ type: 'varchar', length: 4 })
   edad: number;
 
-  @Column({ type: 'varchar', length: 4 })
+  @Column({ default: false})
   activo: boolean;
   
   @Column({ type: 'varchar', length: 50 })
